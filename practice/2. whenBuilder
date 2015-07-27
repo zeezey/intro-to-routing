@@ -3,38 +3,43 @@
 .config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      ...  ( '/people' , {
-        templateUrl: '...',
-        controller: '...'
-    })
+      when( '/people' , {
+        templateUrl: 'content/list_of_people.html',
+        controller: 'PeopleListController'
+      })
+    }])
 
 //I have a route called people and I'm looking at 1 person, replace the ...
 
 .config(['$routeProvider',
   function($routeProvider) {
-    $...
-      ... ( '/people/:peopleId' , {
-        templateUrl: '...',
-        controller: '...'
-    })
+    $routeProvider
+      .when ( '/people/:peopleId' , {
+        templateUrl: 'my_template_file.html',
+        controller: 'PersonController'
+      })
+  }])
 
 //I have a route called settings with a matching controller and template, replace the ...
 
 .config(['$routeProvider',
-  function(...) {
-    ...
-      ...( '/settings' , {
-        ...: '...',
-        ...: '...'
-    })
+  function($routeProvider) {
+    $routeProvider
+      .when( '/settings' , {
+        controller: 'SettingsController',
+        templateUrl: 'nomansland/settings.html'
+      })
+}])
 
 //I have a route called people and I'm looking at 1 person.  I also have a sub-route called activities and I'm looking at a specific activity, replace the ...
 
 
-....(['$...',
-  function(...) {
-    ....
-      ...( '/people/:peopleId/activity/:activityId' , {
-        ...,
-        ...
-    })
+
+.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider
+      .when( '/people/:peopleId/activity/:activityId' , {
+        controller: 'ActivityController',
+        templateUrl: 'activity.html'
+      })
+}])

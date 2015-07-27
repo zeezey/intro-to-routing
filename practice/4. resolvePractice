@@ -5,7 +5,7 @@
         templateUrl: 'templates/add_order.html',
         controller: 'AddOrderController',
         resolve: {
-          ...
+          isAwesome: true
         }
     })
 
@@ -16,7 +16,9 @@
       when('/AddNewOrder', {
         templateUrl: 'templates/add_order.html',
         controller: 'AddOrderController',
-        resolve: ...
+        resolve: {
+          isAwesome: true
+        }
     })
 
 
@@ -26,5 +28,7 @@
       when('/AddNewOrder', {
         templateUrl: 'templates/add_order.html',
         controller: 'AddOrderController',
-        ... : ...
+        resolve : {
+          isAwesome : true
+        }
     })
