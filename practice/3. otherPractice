@@ -1,7 +1,7 @@
 //if the route is empty use the default(empty) route
 
  $routeProvider.
-      when('/AddNewOrder', {
+      when('/Home', {
         templateUrl: 'templates/add_order.html',
         controller: 'AddOrderController'
     }).
@@ -10,7 +10,7 @@
         controller: 'ShowOrdersController'
       }).
       otherwise({
-        redirectTo: '...'
+        redirectTo: '/Home'
       });
 
 //if the route is empty use the default(empty) route
@@ -39,6 +39,6 @@
         templateUrl: 'templates/show_orders.html',
         controller: 'ShowOrdersController'
       }).
-      ...({
-        ...: '...'
+      otherwise({
+        redirectTo: '/AddNewOrder'
       });

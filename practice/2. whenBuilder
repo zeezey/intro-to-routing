@@ -3,9 +3,9 @@
 .config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      ...  ( '/people' , {
-        templateUrl: '...',
-        controller: '...'
+      when( '/people' , {
+        templateUrl: 'list_of_people.html',
+        controller: 'PeopleListController'
     })
 
 //I have a route called people and I'm looking at 1 person, replace the ...
@@ -31,10 +31,18 @@
 //I have a route called people and I'm looking at 1 person.  I also have a sub-route called activities and I'm looking at a specific activity, replace the ...
 
 
-....(['$...',
-  function(...) {
-    ....
-      ...( '/people/:peopleId/activity/:activityId' , {
-        ...,
-        ...
+.config(['$routeProvider',
+  function(rp) {
+    rp
+      .when( '/people/:peopleId/activity/:activityId' , {
+        controller: 'ActivityController',
+        templateUrl: '/app/templates/activities/activity.html'
     })
+    }
+    ])
+    
+
+app.controller('myCtrl', ['$scope', 'peopleService', function(s, p){
+
+
+}]);

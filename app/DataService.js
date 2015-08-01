@@ -1,6 +1,6 @@
 app.service('DataService', function(){
 	return {
-		data: [
+		monkeyData: [
 			{ name: 'John', description: 'John loves cake'},
 			{ name: 'Sara', description: 'Sara loves pie'},
 			{ name: 'Joe', description: 'Joe loves cookies'},
